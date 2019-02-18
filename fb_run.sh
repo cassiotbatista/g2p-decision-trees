@@ -19,11 +19,11 @@ ${M2M_ALIGNER_GITDIR}/m2m-aligner \
 	-o output/${DICT_BASEFILENAME}.old.ali \
 	--alignerOut /tmp/nada
 
-bash ./scripts/fix_align.sh output/${DICT_BASEFILENAME}.old.ali output/${DICT_BASEFILENAME}.new.ali
+bash scripts/fix_align.sh output/${DICT_BASEFILENAME}.old.ali output/${DICT_BASEFILENAME}.new.ali
 #bash ./scripts/check.sh output/${DICT_BASEFILENAME}.new.ali
 
 # fb_01: split
-python3 pysrc/split_train_test.py \
+python3 scripts/split_train_test.py \
 		output/graphemes.list \
 		output/phonemes.list \
 		$DT_CONTEXT \
@@ -31,7 +31,7 @@ python3 pysrc/split_train_test.py \
 		$DT_DATADIR > /dev/null
 
 # fb_02: dectree
-python3 pysrc/dectree.py \
+python3 dt_src/dectree.py \
 	output/graphemes.list \
 	output/phonemes.list \
 	$DT_CONTEXT \
