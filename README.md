@@ -1,4 +1,5 @@
-# Grapheme to Phoneme Conversion Usign Decision Trees for Brazilian Portuguese
+# G2P Conversion for Brazilian Portuguese Using Decision Trees
+Grapheme to phoneme conversion
 
 ## Requirements
 - [python3](https://www.python.org/)   
