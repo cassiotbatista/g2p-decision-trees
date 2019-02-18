@@ -1,4 +1,4 @@
-# G2P Conversion for Brazilian Portuguese Using Decision Trees
+## G2P Conversion for Brazilian Portuguese Using Decision Trees
 Grapheme to phoneme conversion
 
 ## Requirements
@@ -18,6 +18,6 @@ sudo -H pip3 install --upgrade graphviz
 sudo apt-get install python3-tk
 ```
 
-__Copyright (2055-2019) Grupo FalaBrasil__     
+__Copyright (2005-2019) Grupo FalaBrasil__     
 __Universidade Federal do Pará__     
 Cassio Batista - cassio.batista.13@gmail.com
