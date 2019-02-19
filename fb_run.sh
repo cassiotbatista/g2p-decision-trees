@@ -36,6 +36,7 @@ bash scripts/ali2instance.sh output/${DICT_BASEFILENAME}.new.ali
 
 # fb_01: split train and test
 echo -e "${COLOR_FG_BOLD}[${TAG}] Splitting data intro train and test sets...${COLOR_RESET}"
+mkdir -p res
 python3 scripts/split_train_test.py \
 		res/graphemes.list \
 		res/phonemes.list \
