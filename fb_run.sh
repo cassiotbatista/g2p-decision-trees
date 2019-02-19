@@ -19,6 +19,7 @@ ${M2M_ALIGNER_GITDIR}/m2m-aligner \
 	-o output/${DICT_BASEFILENAME}.old.ali \
 	--alignerOut /tmp/nada
 
+rm -f output/${DICT_BASEFILENAME}.ali.err
 bash scripts/fix_align.sh output/${DICT_BASEFILENAME}.old.ali output/${DICT_BASEFILENAME}.new.ali
 #bash ./scripts/check.sh output/${DICT_BASEFILENAME}.new.ali
 
