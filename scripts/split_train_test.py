@@ -66,6 +66,7 @@ def split_train_test(data, graphemes, phonemes, context, outdir, train_percent=8
 			label_index = phonemes.index(label)
 
 			print(prefix, instance, label) if DEGUB else print('\r%d/%d' % (i,n), end='')
+			sys.stdout.flush()
 
 			with io.open(prefix + '.char', 'a', encoding='utf-8' ) as f:
 				for inst in instance:
@@ -76,6 +77,7 @@ def split_train_test(data, graphemes, phonemes, context, outdir, train_percent=8
 				for inst in instance_index:
 					f.write('%-3d' % inst)
 				f.write('%2d\n' % label_index)
+	print('')
 	return n
 
 if __name__ == '__main__':
@@ -106,6 +108,8 @@ if __name__ == '__main__':
 	directory = sys.argv[5] + '/'
 	if not os.path.isdir(directory):
 		os.mkdir(directory)
-	
+
+	if not DEGUB:
+		print('[%s] set DEBUG flag "True" to enable verbose mode.' % sys.argv[0])
 	split_train_test(data, graphemes, phonemes, context, directory)
 

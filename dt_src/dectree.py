@@ -171,6 +171,9 @@ if __name__=='__main__':
 		print('error: %s is not a valid dir' % sys.argv[4])
 		sys.exit(2)
 
+	if not DEGUB:
+		print('[%s] set DEBUG flag "True" to enable verbose mode.' % sys.argv[0])
+
 	# train routine
 	print('training DT...')
 	clf = dt_train(refdir, context)
