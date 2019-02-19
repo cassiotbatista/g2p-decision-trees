@@ -9,7 +9,7 @@ COLOR_RESET="\033[0m"
 
 TAG='FB_RUN'
 DT_CONTEXT=4
-DT_DATADIR="data"
+DT_DATADIR="dt_data"
 DICT_BASEFILENAME="dict_50k"
 
 # TODO: path to m2m aligner
