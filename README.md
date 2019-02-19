@@ -10,7 +10,7 @@ Grapheme to phoneme conversion
 - [TkInter](https://wiki.python.org/moin/TkInter)    
 
 
-``` 
+```bash 
 sudo apt-get install python3
 sudo -H pip3 install --upgrade pip           # optional but recommended
 sudo -H pip3 install --upgrade scikit-learn
